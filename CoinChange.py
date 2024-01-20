@@ -16,7 +16,7 @@ def sort1(data):
         max_index= i
         for j in range( i+1, len(data)):
             if data[j] > data[max_index]:
-                map_index = j
+                max_index = j
 
         data[i], data[max_index] = data[max_index], data[i]
             
