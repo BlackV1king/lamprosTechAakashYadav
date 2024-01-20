@@ -9,8 +9,20 @@ denominations = list( map(int, input("Enter the denominations space separated : 
 # Input the amount
 amount = int(input("Ebter the amount : "))
 
-# Sort the denominations into descending order
-denominations.sort(reverse=True)
+# Sort the denominations into descending order using selection sort
+# denominations.sort(reverse=True)
+def sort1(data):
+    for i in range(len(data) - 1):
+        max_index= i
+        for j in range( i+1, len(data)):
+            if data[j] > data[max_index]:
+                map_index = j
+
+        data[i], data[max_index] = data[max_index], data[i]
+            
+    return data
+
+denominations = sort1(denominations)
 
 # Number of coins
 coins = 0
